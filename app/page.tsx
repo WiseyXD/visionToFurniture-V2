@@ -1,24 +1,338 @@
-import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
-import { Button } from '@nextui-org/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
     return (
-        <main className="min-h-[93vh] flex flex-col items-center justify-center p-24 gap-y-10 ">
-            Landing will be here.
-            <div className="flex flex-col gap-y-[100px] items-center">
-                <Link href={'/register'}>
-                    <HoverBorderGradient
-                        containerClassName="rounded-full"
-                        as="button"
-                        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+        // <main className="min-h-[93vh] flex flex-col items-center justify-center p-24 gap-y-10 ">
+        <div>
+            <section className="w-full py-12 md:py-24 lg:py-32">
+                <div className="container px-4 md:px-6">
+                    <div className="grid gap-6 lg:grid-cols-[1fr_550px] lg:gap-12 xl:grid-cols-[1fr_650px]">
+                        <div className="flex flex-col justify-center space-y-4">
+                            <div className="space-y-2">
+                                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl">
+                                    Find Your Perfect Furniture Match
+                                </h1>
+                                <p className="max-w-[700px] text-muted-foreground md:text-xl">
+                                    Our AI-powered recommendation model analyzes
+                                    your preferences and suggests complementary
+                                    furniture items to create your dream space.
+                                </p>
+                            </div>
+                            <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                                <Link
+                                    href="#"
+                                    className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                                    prefetch={false}
+                                >
+                                    Try It Now
+                                </Link>
+                                <Link
+                                    href="#"
+                                    className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                                    prefetch={false}
+                                >
+                                    Learn More
+                                </Link>
+                            </div>
+                        </div>
+                        <Image
+                            src="/placeholder.svg"
+                            width="550"
+                            height="550"
+                            alt="Hero"
+                            className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section className="w-full py-12 md:py-24 lg:py-32">
+                <div className="container space-y-12 px-4 md:px-6">
+                    <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                        <div className="space-y-2">
+                            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                                Featured Products
+                            </div>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                                Discover Our Curated Collection
+                            </h2>
+                            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                Browse our selection of high-quality, stylish
+                                furniture pieces that will elevate your living
+                                space.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
+                        <Card>
+                            <CardContent>
+                                <Image
+                                    src="/placeholder.svg"
+                                    width="300"
+                                    height="300"
+                                    alt="Product"
+                                    className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+                                />
+                                <div className="mt-4 space-y-1">
+                                    <h3 className="text-lg font-bold">
+                                        Modern Sofa
+                                    </h3>
+                                    <p className="text-muted-foreground">
+                                        $1,299
+                                    </p>
+                                </div>
+                            </CardContent>
+                            <CardFooter>
+                                <Button variant="outline">Add to Cart</Button>
+                            </CardFooter>
+                        </Card>
+                        <Card>
+                            <CardContent>
+                                <Image
+                                    src="/placeholder.svg"
+                                    width="300"
+                                    height="300"
+                                    alt="Product"
+                                    className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+                                />
+                                <div className="mt-4 space-y-1">
+                                    <h3 className="text-lg font-bold">
+                                        Minimalist Armchair
+                                    </h3>
+                                    <p className="text-muted-foreground">
+                                        $599
+                                    </p>
+                                </div>
+                            </CardContent>
+                            <CardFooter>
+                                <Button variant="outline">Add to Cart</Button>
+                            </CardFooter>
+                        </Card>
+                        <Card>
+                            <CardContent>
+                                <Image
+                                    src="/placeholder.svg"
+                                    width="300"
+                                    height="300"
+                                    alt="Product"
+                                    className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+                                />
+                                <div className="mt-4 space-y-1">
+                                    <h3 className="text-lg font-bold">
+                                        Wooden Coffee Table
+                                    </h3>
+                                    <p className="text-muted-foreground">
+                                        $399
+                                    </p>
+                                </div>
+                            </CardContent>
+                            <CardFooter>
+                                <Button variant="outline">Add to Cart</Button>
+                            </CardFooter>
+                        </Card>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+                <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+                    <div className="space-y-3">
+                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                            What Our Customers Say
+                        </h2>
+                        <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            Hear from real people who have used our AI-powered
+                            furniture recommendation system to transform their
+                            living spaces.
+                        </p>
+                    </div>
+                    <div className="grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        <Card>
+                            <CardContent>
+                                <div className="flex items-start space-x-4">
+                                    <Avatar>
+                                        <AvatarImage src="/placeholder-user.jpg" />
+                                        <AvatarFallback>JD</AvatarFallback>
+                                    </Avatar>
+                                    <div className="space-y-1">
+                                        <h4 className="text-lg font-medium">
+                                            John Doe
+                                        </h4>
+                                        <p className="text-muted-foreground">
+                                            Homeowner
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="mt-4 text-muted-foreground">
+                                    The AI recommendations helped me find the
+                                    perfect pieces to\n complement my existing
+                                    furniture. Its been a game-changer for\n my
+                                    living room!
+                                </div>
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardContent>
+                                <div className="flex items-start space-x-4">
+                                    <Avatar>
+                                        <AvatarImage src="/placeholder-user.jpg" />
+                                        <AvatarFallback>JS</AvatarFallback>
+                                    </Avatar>
+                                    <div className="space-y-1">
+                                        <h4 className="text-lg font-medium">
+                                            Jane Smith
+                                        </h4>
+                                        <p className="text-muted-foreground">
+                                            Interior Designer
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="mt-4 text-muted-foreground">
+                                    As an interior designer, I rely on tools
+                                    like this to help my\n clients visualize
+                                    their dream spaces. The recommendations
+                                    are\n spot-on every time.
+                                </div>
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardContent>
+                                <div className="flex items-start space-x-4">
+                                    <Avatar>
+                                        <AvatarImage src="/placeholder-user.jpg" />
+                                        <AvatarFallback>MR</AvatarFallback>
+                                    </Avatar>
+                                    <div className="space-y-1">
+                                        <h4 className="text-lg font-medium">
+                                            Michael Roth
+                                        </h4>
+                                        <p className="text-muted-foreground">
+                                            Homeowner
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="mt-4 text-muted-foreground">
+                                    I was hesitant at first, but the AI
+                                    recommendations were\n surprisingly
+                                    accurate. I ended up finding pieces I
+                                    absolutely\n love and my living room looks
+                                    better than ever.
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full py-12 md:py-24 lg:py-32">
+                <div className="container space-y-12 px-4 md:px-6">
+                    <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                        <div className="space-y-2">
+                            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                                Featured Brands
+                            </div>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                                Trusted by Leading Brands
+                            </h2>
+                            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                Our AI-powered recommendation system is used by
+                                some of the biggest names in the furniture
+                                industry.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-5 lg:gap-12">
+                        <Image
+                            src="/placeholder.svg"
+                            width="140"
+                            height="70"
+                            alt="Brand Logo"
+                            className="mx-auto aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                        />
+                        <Image
+                            src="/placeholder.svg"
+                            width="140"
+                            height="70"
+                            alt="Brand Logo"
+                            className="mx-auto aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                        />
+                        <Image
+                            src="/placeholder.svg"
+                            width="140"
+                            height="70"
+                            alt="Brand Logo"
+                            className="mx-auto aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                        />
+                        <Image
+                            src="/placeholder.svg"
+                            width="140"
+                            height="70"
+                            alt="Brand Logo"
+                            className="mx-auto aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                        />
+                        <Image
+                            src="/placeholder.svg"
+                            width="140"
+                            height="70"
+                            alt="Brand Logo"
+                            className="mx-auto aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+                <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+                    <div className="space-y-3">
+                        <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+                            Ready to Transform Your Space?
+                        </h2>
+                        <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            Start your journey to the perfect living space with
+                            our AI-powered furniture recommendation system.
+                        </p>
+                    </div>
+                    <div className="flex justify-center gap-4">
+                        <Link
+                            href="#"
+                            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                            prefetch={false}
+                        >
+                            Try It Now
+                        </Link>
+                        <Link
+                            href="#"
+                            className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                            prefetch={false}
+                        >
+                            Learn More
+                        </Link>
+                    </div>
+                </div>
+            </section>
+            <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+                <p className="text-xs text-muted-foreground">
+                    &copy; 2024 Vision Inc. All rights reserved.
+                </p>
+                <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+                    <Link
+                        href="#"
+                        className="text-xs hover:underline underline-offset-4"
+                        prefetch={false}
                     >
-                        Join Today
-                    </HoverBorderGradient>
-                </Link>
-                <Button>New Button</Button>
-            </div>
-        </main>
+                        Terms of Service
+                    </Link>
+                    <Link
+                        href="#"
+                        className="text-xs hover:underline underline-offset-4"
+                        prefetch={false}
+                    >
+                        Privacy
+                    </Link>
+                </nav>
+            </footer>
+        </div>
+        // </main>
     );
 }
 
