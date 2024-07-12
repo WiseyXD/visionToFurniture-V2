@@ -30,9 +30,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## This is the vision to furniture application.
 
--   [ ] Landing Page
+-   [x] Landing Page
 -   [ ] Home Page
 -   [x] Mail Verification
 -   [ ] Multilingual Support
+-   [ ] Stable diffusion model from cf
 
 > **Note:** Change Schema for Input validation in schema.ts file
