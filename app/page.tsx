@@ -6,6 +6,8 @@ import Link from 'next/link';
 
 export default function Home() {
     return (
+        // done
+
         // <main className="min-h-[93vh] flex flex-col items-center justify-center p-24 gap-y-10 ">
         <div>
             <section className="w-full py-12 md:py-24 lg:py-32">
