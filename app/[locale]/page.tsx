@@ -1,10 +1,12 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
+    const t = useTranslations('HomePage');
     return (
         // <main className="min-h-[93vh] flex flex-col items-center justify-center p-24 gap-y-10 ">
         <div>
@@ -14,7 +16,8 @@ export default function Home() {
                         <div className="flex flex-col justify-center space-y-4">
                             <div className="space-y-2">
                                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl">
-                                    Find Your Perfect Furniture Match
+                                    {/* Find Your Perfect Furniture Match */}
+                                    {t('title')}
                                 </h1>
                                 <p className="max-w-[700px] text-muted-foreground md:text-xl">
                                     Our AI-powered recommendation model analyzes
