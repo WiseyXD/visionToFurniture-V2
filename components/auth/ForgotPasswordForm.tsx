@@ -18,11 +18,13 @@ import { FormError } from '@/components/form-error';
 import { FormSuccess } from '@/components/form-success';
 import { resetPasswordSchema } from '@/lib/schema';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState, useTransition } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function ForgotPasswordForm({ email }: { email: string }) {
+    const t = useTranslations('forget');
     const router = useRouter();
 
     const [isPending, startTransisiton] = useTransition();
@@ -68,10 +70,10 @@ export default function ForgotPasswordForm({ email }: { email: string }) {
                         >
                             <div className="grid gap-2 text-center">
                                 <h1 className="text-3xl font-bold">
-                                    Reset Password
+                                    {t('resetPassword')}
                                 </h1>
                                 <p className="text-balance text-muted-foreground">
-                                    Reset forgottend Password
+                                    {t('re')}
                                 </p>
                             </div>
                             <FormField
@@ -89,7 +91,7 @@ export default function ForgotPasswordForm({ email }: { email: string }) {
                                             />
                                         </FormControl>
                                         <FormDescription>
-                                            This should be a new password
+                                            {t('res')}
                                         </FormDescription>
                                         <FormMessage />
                                     </FormItem>
@@ -100,7 +102,7 @@ export default function ForgotPasswordForm({ email }: { email: string }) {
                                 name="password"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Password</FormLabel>
+                                        <FormLabel>{t('password')}</FormLabel>
                                         <FormControl>
                                             <Input
                                                 placeholder="*****"
@@ -110,7 +112,7 @@ export default function ForgotPasswordForm({ email }: { email: string }) {
                                             />
                                         </FormControl>
                                         <FormDescription>
-                                            This should be a new password
+                                            {t('res')}
                                         </FormDescription>
                                         <FormMessage />
                                     </FormItem>
@@ -121,7 +123,7 @@ export default function ForgotPasswordForm({ email }: { email: string }) {
                                 name="reEnterPassword"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Re-enter Password</FormLabel>
+                                        <FormLabel>{t('ree')}</FormLabel>
                                         <FormControl>
                                             <Input
                                                 placeholder="******"
@@ -131,7 +133,7 @@ export default function ForgotPasswordForm({ email }: { email: string }) {
                                             />
                                         </FormControl>
                                         <FormDescription>
-                                            This is your mask key.
+                                            {t('ma')}
                                         </FormDescription>
                                         <FormMessage />
                                     </FormItem>
@@ -141,7 +143,7 @@ export default function ForgotPasswordForm({ email }: { email: string }) {
                             <FormSuccess message={success} />
 
                             <Button type="submit" disabled={isPending}>
-                                Submit
+                                {t('su')}
                             </Button>
                         </form>
                     </Form>

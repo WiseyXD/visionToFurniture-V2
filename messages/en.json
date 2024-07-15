@@ -1,5 +1,63 @@
 {
     "HomePage": {
-        "title": "Hello world!"
+        "title": "Find Your Perfect Furniture Match!",
+        "head": "Our AI-powered recommendation model analyzes your preferences and suggests complementary furniture items to create your dream space.",
+        "tryIt": "Try it Now",
+        "learn": "Learn More",
+        "feature": "Featured Products",
+        "discover": "Discover Our Curated Collection",
+        "browse": "Browse our selection of high-quality, stylish furniture pieces that will elevate your living space.",
+        "modern": "Modern Sofa",
+        "$": "$1,299",
+        "add": "Add to Cart",
+        "minimalist": "Minimalist Armchair",
+        "$1": "$599",
+
+        "wooden": "Wooden Coffee Table",
+        "$2": "$399",
+
+        "what": "What Our Customers Say",
+        "hear": "Hear from real people who have used our AI-powered furniture recommendation system to transform their living spaces.",
+        "jd": "JD",
+        "john": "John Doe",
+        "homeowner": "Homeowner",
+        "ai": "The AI recommendations helped me find the  perfect pieces to complement my existing  furniture. Its been a game-changer for my   living room!",
+
+        "js": "JS",
+        "jane": "Jane Smith",
+        "interior": "Interior Designer",
+        "rec": "As an interior designer, I rely on tools like this to help my clients visualize their dream spaces. The recommendations are spot-on every time.",
+        "mr": "MR",
+        "michael": "Michael Roth",
+
+        "home": "I was hesitant at first, but the AI recommendations were\n surprisingly accurate. I ended up finding pieces I absolutely\n love and my living room looks better than ever.",
+        "featured": "Featured Brands",
+        "trusted": "Trusted by Leading Brands",
+        "trust": "Our AI-powered recommendation system is used by some of the biggest names in the furniture industry.",
+        "ready": "Ready to Transform Your Space?",
+        "start": "Start your journey to the perfect living space with our AI-powered furniture recommendation system.",
+        "try": " Try It Now",
+
+        "copyright": "2024 Vision Inc. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+
+    "authForm": {
+        "email": "Email",
+        "emailDescription": "This is should be your mail-id.",
+        "password": "Password",
+        "passwordDescription": "This is your password. ",
+        "forgotPassword": "Forgot Password ?",
+        "resendVerificationEmail": "Resend Verification Email"
+    },
+    "forget": {
+        "resetPassword": "Reset Password",
+        "re": " Reset forgottend Password",
+        "res": "This should be a new password",
+        "password": "Password",
+        "ree": "Re-enter Password",
+        "ma": "This is your password.",
+        "su": "Submit"
     }
 }

@@ -16,13 +16,10 @@ export default function Home() {
                         <div className="flex flex-col justify-center space-y-4">
                             <div className="space-y-2">
                                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl">
-                                    {/* Find Your Perfect Furniture Match */}
                                     {t('title')}
                                 </h1>
                                 <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                                    Our AI-powered recommendation model analyzes
-                                    your preferences and suggests complementary
-                                    furniture items to create your dream space.
+                                    {t('head')}
                                 </p>
                             </div>
                             <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -31,14 +28,14 @@ export default function Home() {
                                     className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                                     prefetch={false}
                                 >
-                                    Try It Now
+                                    {t('tryIt')}
                                 </Link>
                                 <Link
                                     href="#"
                                     className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                                     prefetch={false}
                                 >
-                                    Learn More
+                                    {t('learn')}
                                 </Link>
                             </div>
                         </div>
@@ -57,15 +54,13 @@ export default function Home() {
                     <div className="flex flex-col items-center justify-center space-y-4 text-center">
                         <div className="space-y-2">
                             <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
-                                Featured Products
+                                {t('feature')}
                             </div>
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                                Discover Our Curated Collection
+                                {t('discover')}
                             </h2>
                             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                Browse our selection of high-quality, stylish
-                                furniture pieces that will elevate your living
-                                space.
+                                {t('browse')}
                             </p>
                         </div>
                     </div>
@@ -81,15 +76,15 @@ export default function Home() {
                                 />
                                 <div className="mt-4 space-y-1">
                                     <h3 className="text-lg font-bold">
-                                        Modern Sofa
+                                        {t('modern')}
                                     </h3>
                                     <p className="text-muted-foreground">
-                                        $1,299
+                                        {t('$')}
                                     </p>
                                 </div>
                             </CardContent>
                             <CardFooter>
-                                <Button variant="outline">Add to Cart</Button>
+                                <Button variant="outline">{t('add')}</Button>
                             </CardFooter>
                         </Card>
                         <Card>
@@ -103,15 +98,15 @@ export default function Home() {
                                 />
                                 <div className="mt-4 space-y-1">
                                     <h3 className="text-lg font-bold">
-                                        Minimalist Armchair
+                                        {t('minimalist')}
                                     </h3>
                                     <p className="text-muted-foreground">
-                                        $599
+                                        {t('$1')}
                                     </p>
                                 </div>
                             </CardContent>
                             <CardFooter>
-                                <Button variant="outline">Add to Cart</Button>
+                                <Button variant="outline">{t('add')}</Button>
                             </CardFooter>
                         </Card>
                         <Card>
@@ -125,15 +120,15 @@ export default function Home() {
                                 />
                                 <div className="mt-4 space-y-1">
                                     <h3 className="text-lg font-bold">
-                                        Wooden Coffee Table
+                                        {t('wooden')}
                                     </h3>
                                     <p className="text-muted-foreground">
-                                        $399
+                                        {t('$2')}
                                     </p>
                                 </div>
                             </CardContent>
                             <CardFooter>
-                                <Button variant="outline">Add to Cart</Button>
+                                <Button variant="outline">{t('add')}</Button>
                             </CardFooter>
                         </Card>
                     </div>
@@ -143,12 +138,10 @@ export default function Home() {
                 <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
                     <div className="space-y-3">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                            What Our Customers Say
+                            {t('what')}
                         </h2>
                         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                            Hear from real people who have used our AI-powered
-                            furniture recommendation system to transform their
-                            living spaces.
+                            {t('hear')}
                         </p>
                     </div>
                     <div className="grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -157,22 +150,21 @@ export default function Home() {
                                 <div className="flex items-start space-x-4">
                                     <Avatar>
                                         <AvatarImage src="/placeholder-user.jpg" />
-                                        <AvatarFallback>JD</AvatarFallback>
+                                        <AvatarFallback>
+                                            {t('jd')}
+                                        </AvatarFallback>
                                     </Avatar>
                                     <div className="space-y-1">
                                         <h4 className="text-lg font-medium">
-                                            John Doe
+                                            {t('john')}
                                         </h4>
                                         <p className="text-muted-foreground">
-                                            Homeowner
+                                            {t('homeowner')}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="mt-4 text-muted-foreground">
-                                    The AI recommendations helped me find the
-                                    perfect pieces to\n complement my existing
-                                    furniture. Its been a game-changer for\n my
-                                    living room!
+                                    {t('ai')}
                                 </div>
                             </CardContent>
                         </Card>
@@ -185,18 +177,15 @@ export default function Home() {
                                     </Avatar>
                                     <div className="space-y-1">
                                         <h4 className="text-lg font-medium">
-                                            Jane Smith
+                                            {t('jane')}
                                         </h4>
                                         <p className="text-muted-foreground">
-                                            Interior Designer
+                                            {t('interior')}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="mt-4 text-muted-foreground">
-                                    As an interior designer, I rely on tools
-                                    like this to help my\n clients visualize
-                                    their dream spaces. The recommendations
-                                    are\n spot-on every time.
+                                    {t('rec')}
                                 </div>
                             </CardContent>
                         </Card>
@@ -205,23 +194,21 @@ export default function Home() {
                                 <div className="flex items-start space-x-4">
                                     <Avatar>
                                         <AvatarImage src="/placeholder-user.jpg" />
-                                        <AvatarFallback>MR</AvatarFallback>
+                                        <AvatarFallback>
+                                            {t('mr')}
+                                        </AvatarFallback>
                                     </Avatar>
                                     <div className="space-y-1">
                                         <h4 className="text-lg font-medium">
-                                            Michael Roth
+                                            {t('michael')}
                                         </h4>
                                         <p className="text-muted-foreground">
-                                            Homeowner
+                                            {t('homeowner')}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="mt-4 text-muted-foreground">
-                                    I was hesitant at first, but the AI
-                                    recommendations were\n surprisingly
-                                    accurate. I ended up finding pieces I
-                                    absolutely\n love and my living room looks
-                                    better than ever.
+                                    {t('home')}
                                 </div>
                             </CardContent>
                         </Card>
@@ -233,15 +220,13 @@ export default function Home() {
                     <div className="flex flex-col items-center justify-center space-y-4 text-center">
                         <div className="space-y-2">
                             <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
-                                Featured Brands
+                                {t('featured')}
                             </div>
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                                Trusted by Leading Brands
+                                {t('trusted')}
                             </h2>
                             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                Our AI-powered recommendation system is used by
-                                some of the biggest names in the furniture
-                                industry.
+                                {t('trust')}
                             </p>
                         </div>
                     </div>
@@ -288,11 +273,10 @@ export default function Home() {
                 <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
                     <div className="space-y-3">
                         <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-                            Ready to Transform Your Space?
+                            {t('ready')}
                         </h2>
                         <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                            Start your journey to the perfect living space with
-                            our AI-powered furniture recommendation system.
+                            {t('start')}
                         </p>
                     </div>
                     <div className="flex justify-center gap-4">
@@ -301,21 +285,21 @@ export default function Home() {
                             className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                             prefetch={false}
                         >
-                            Try It Now
+                            {t('try')}
                         </Link>
                         <Link
                             href="#"
                             className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                             prefetch={false}
                         >
-                            Learn More
+                            {t('learn')}
                         </Link>
                     </div>
                 </div>
             </section>
             <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
                 <p className="text-xs text-muted-foreground">
-                    &copy; 2024 Vision Inc. All rights reserved.
+                    &copy; {t('copyright')}
                 </p>
                 <nav className="sm:ml-auto flex gap-4 sm:gap-6">
                     <Link
@@ -323,14 +307,14 @@ export default function Home() {
                         className="text-xs hover:underline underline-offset-4"
                         prefetch={false}
                     >
-                        Terms of Service
+                        {t('terms')}
                     </Link>
                     <Link
                         href="#"
                         className="text-xs hover:underline underline-offset-4"
                         prefetch={false}
                     >
-                        Privacy
+                        {t('privacy')}
                     </Link>
                 </nav>
             </footer>

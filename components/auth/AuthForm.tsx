@@ -28,6 +28,7 @@ import { resendEmailVerificationLink } from '@/actions/resendEmail';
 import { sendLinkInMail } from '@/actions/resetPassword';
 import { loginSchema, signupSchema } from '@/lib/schema';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useTranslations } from 'next-intl';
 
 export interface IAuthFormProps {
     label: string;
@@ -48,6 +49,8 @@ export default function AuthForm({
     submitButton,
     formType,
 }: IAuthFormProps) {
+    const t = useTranslations('authForm');
+
     const router = useRouter();
     const isRegister = formType === 'register' ? true : false;
     const [oneTimError, setOneTimeError] = useState(false);
@@ -144,7 +147,7 @@ export default function AuthForm({
                                 name="email"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Email</FormLabel>
+                                        <FormLabel>{t('email')}</FormLabel>
                                         <FormControl>
                                             <Input
                                                 placeholder="shadcn"
@@ -154,8 +157,7 @@ export default function AuthForm({
                                             />
                                         </FormControl>
                                         <FormDescription>
-                                            This is should be your college
-                                            mail-id.
+                                            {t('emaildescription')}
                                         </FormDescription>
                                         <FormMessage />
                                     </FormItem>
@@ -166,7 +168,7 @@ export default function AuthForm({
                                 name="password"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Password</FormLabel>
+                                        <FormLabel>{t('password')}</FormLabel>
                                         <FormControl>
                                             <Input
                                                 placeholder="******"
@@ -176,7 +178,7 @@ export default function AuthForm({
                                             />
                                         </FormControl>
                                         <FormDescription>
-                                            This is your mask key.
+                                            {t('passwordDescription')}
                                         </FormDescription>
                                         <FormMessage />
                                     </FormItem>
@@ -195,7 +197,7 @@ export default function AuthForm({
                                         }}
                                         type="button"
                                     >
-                                        Forgot Password ?
+                                        {t('forgotPassword')}
                                     </button>
                                 </div>
                             )}
@@ -213,7 +215,7 @@ export default function AuthForm({
                                     onClick={onResendEmail}
                                     disabled={count < 60 && count > 0}
                                 >
-                                    Resend Verification Email
+                                    {t('resendVerificationEmail')}
                                 </Button>
                                 {count}
                             </div>
