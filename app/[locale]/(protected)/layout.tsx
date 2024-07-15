@@ -1,4 +1,5 @@
 import { validateRequest } from '@/actions/validateRequests';
+import { getLocale } from 'next-intl/server';
 import { redirect } from 'next/navigation';
 
 export interface IBaseTemplate {
@@ -7,6 +8,7 @@ export interface IBaseTemplate {
 
 export default async function BaseTemplate({ children }: IBaseTemplate) {
     const { session } = await validateRequest();
-    if (!session) redirect('/login');
+    const activeLocale = await getLocale();
+    if (!session) redirect(`/${activeLocale}/login`);
     return <div>{children}</div>;
 }

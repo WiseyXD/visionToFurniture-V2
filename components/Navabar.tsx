@@ -71,7 +71,7 @@ export default function NewNavbar() {
                         </NavbarItem>
                         <NavbarItem>
                             <Link color="foreground" href="#">
-                                {t('integrarions')}
+                                {t('integrations')}
                             </Link>
                         </NavbarItem>
                         <NavbarItem>
