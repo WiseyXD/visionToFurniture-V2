@@ -10,6 +10,7 @@ import {
     NavbarMenuToggle,
     Button as NextButton,
 } from '@nextui-org/react';
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 import { AcmeLogo } from './AcmeLogo';
@@ -19,6 +20,8 @@ export default function NewNavbar() {
     const sessionData = useSession();
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+    const activeLocal = useLocale();
 
     const menuItems = [
         'Profile',
@@ -98,13 +101,13 @@ export default function NewNavbar() {
             ) : (
                 <NavbarContent justify="end">
                     <NavbarItem className="hidden lg:flex">
-                        <Link href="/login">Login</Link>
+                        <Link href={`/${activeLocal}/login`}>Login</Link>
                     </NavbarItem>
                     <NavbarItem>
                         <NextButton
                             as={Link}
                             color="primary"
-                            href="/register"
+                            href={`/${activeLocal}/register`}
                             variant="flat"
                         >
                             Sign Up

@@ -28,7 +28,7 @@ export default async function RootLayout({
     const sessionData = await validateRequest();
     const messages = await getMessages();
     return (
-        <html lang="en">
+        <html lang={locale}>
             <body className={inter.className}>
                 <SessionProvider value={sessionData}>
                     <NextIntlClientProvider messages={messages}>
