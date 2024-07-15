@@ -10,7 +10,7 @@ import {
     NavbarMenuToggle,
     Button as NextButton,
 } from '@nextui-org/react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 import { AcmeLogo } from './AcmeLogo';
@@ -18,6 +18,8 @@ import LocaleToggle from './locale-toggle';
 import { ModeToggle } from './mode-toggle';
 
 export default function NewNavbar() {
+    const t = useTranslations('nav');
+
     const sessionData = useSession();
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -47,7 +49,7 @@ export default function NewNavbar() {
                 <Link href={'/'} className="cursor-pointer">
                     <NavbarBrand>
                         <AcmeLogo />
-                        <p className="font-bold text-inherit">Vision</p>
+                        <p className="font-bold text-inherit">{t('vision')}</p>
                     </NavbarBrand>
                 </Link>
             </NavbarContent>
@@ -59,17 +61,17 @@ export default function NewNavbar() {
                     >
                         <NavbarItem>
                             <Link color="foreground" href="#">
-                                Features
+                                {t('features')}
                             </Link>
                         </NavbarItem>
                         <NavbarItem isActive>
                             <Link href="#" aria-current="page">
-                                Customers
+                                {t('customers')}
                             </Link>
                         </NavbarItem>
                         <NavbarItem>
                             <Link color="foreground" href="#">
-                                Integrations
+                                {t('integrarions')}
                             </Link>
                         </NavbarItem>
                         <NavbarItem>
@@ -105,7 +107,7 @@ export default function NewNavbar() {
                         <LocaleToggle />
                     </NavbarItem>
                     <NavbarItem className="hidden lg:flex">
-                        <Link href={`/${activeLocal}/login`}>Login</Link>
+                        <Link href={`/${activeLocal}/login`}>{t('login')}</Link>
                     </NavbarItem>
                     <NavbarItem>
                         <NextButton
@@ -114,7 +116,7 @@ export default function NewNavbar() {
                             href={`/${activeLocal}/register`}
                             variant="flat"
                         >
-                            Sign Up
+                            {t('signUp')}
                         </NextButton>
                     </NavbarItem>
                 </NavbarContent>

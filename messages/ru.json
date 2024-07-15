@@ -62,5 +62,14 @@
         "features": "Функции",
         "vision": "Видение",
         "signUp": "Зарегистрироваться"
+    },
+    "loginPage": {
+        "label": "Войти",
+        "labelText": "Введите ваш email ниже, чтобы войти на SCOE-Mask",
+        "backButtonHref": "регистрация",
+        "backButtonText": "Зарегистрироваться",
+        "backButtonLabel": "У вас нет аккаунта?",
+        "submitButton": "Войти",
+        "formType": "вход"
     }
 }

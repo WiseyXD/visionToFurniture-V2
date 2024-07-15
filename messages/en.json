@@ -59,5 +59,22 @@
         "ree": "Re-enter Password",
         "ma": "This is your password.",
         "su": "Submit"
+    },
+    "nav": {
+        "login": "Login",
+        "integrations": "Integrations",
+        "customers": "Customers",
+        "features": "Features",
+        "vision": "Vision",
+        "signUp": "Sign Up"
+    },
+    "loginpage": {
+        "label": "Login",
+        "labelText": "Enter your email below to Login on SCOE-Mask",
+        "backButtonHref": "register",
+        "backButtonText": "Register",
+        "backButtonLabel": "Don't have an account ?",
+        "submitButton": "Login",
+        "formType": "login"
     }
 }
