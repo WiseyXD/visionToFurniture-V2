@@ -70,11 +70,20 @@
     },
     "loginpage": {
         "label": "Login",
-        "labelText": "Enter your email below to Login on SCOE-Mask",
-        "backButtonHref": "register",
+        "labelText": "Enter your email below to Login on Vision to Furniture",
+
         "backButtonText": "Register",
         "backButtonLabel": "Don't have an account ?",
         "submitButton": "Login",
         "formType": "login"
+    },
+    "signup": {
+        "label1": "Register",
+        "labelText1": "Enter your email below to register on Vision to Furniture",
+
+        "backButtonText1": "Login",
+        "backButtonLabel1": " Already have an account ?",
+        "submitButton1": "Register",
+        "formType1": "register"
     }
 }

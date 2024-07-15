@@ -157,7 +157,7 @@ export default function AuthForm({
                                             />
                                         </FormControl>
                                         <FormDescription>
-                                            {t('emaildescription')}
+                                            {t('emailDescription')}
                                         </FormDescription>
                                         <FormMessage />
                                     </FormItem>

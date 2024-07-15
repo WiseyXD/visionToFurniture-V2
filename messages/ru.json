@@ -63,13 +63,22 @@
         "vision": "Видение",
         "signUp": "Зарегистрироваться"
     },
-    "loginPage": {
+    "loginpage": {
         "label": "Войти",
         "labelText": "Введите ваш email ниже, чтобы войти на SCOE-Mask",
-        "backButtonHref": "регистрация",
+
         "backButtonText": "Зарегистрироваться",
         "backButtonLabel": "У вас нет аккаунта?",
         "submitButton": "Войти",
         "formType": "вход"
+    },
+    "signup": {
+        "label1": "Зарегистрироваться",
+        "labelText1": "Введите ваш email ниже, чтобы зарегистрироваться на SCOE-Mask",
+
+        "backButtonText1": "Войти",
+        "backButtonLabel1": "Уже есть аккаунт?",
+        "submitButton1": "Зарегистрироваться",
+        "formType1": "регистрация"
     }
 }
