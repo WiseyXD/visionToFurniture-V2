@@ -1,6 +1,6 @@
 import AuthForm from '@/components/auth/AuthForm';
 import { useLocale } from 'next-intl';
-export default function page() {
+export default function Page() {
     const activeLocal = useLocale();
     return (
         <AuthForm

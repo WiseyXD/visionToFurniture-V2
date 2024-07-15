@@ -14,6 +14,7 @@ import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 import { AcmeLogo } from './AcmeLogo';
+import LocaleToggle from './locale-toggle';
 import { ModeToggle } from './mode-toggle';
 
 export default function NewNavbar() {
@@ -100,6 +101,9 @@ export default function NewNavbar() {
                 </>
             ) : (
                 <NavbarContent justify="end">
+                    <NavbarItem>
+                        <LocaleToggle />
+                    </NavbarItem>
                     <NavbarItem className="hidden lg:flex">
                         <Link href={`/${activeLocal}/login`}>Login</Link>
                     </NavbarItem>
