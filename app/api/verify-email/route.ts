@@ -1,10 +1,12 @@
 import { lucia } from '@/lib/auth';
 import db from '@/lib/db';
 import jwt from 'jsonwebtoken';
+import { useLocale } from 'next-intl';
 import { cookies } from 'next/headers';
 import { NextRequest } from 'next/server';
 
 export async function GET(req: NextRequest) {
+    const activeLocal = useLocale();
     const url = new URL(req.url);
     const searchParams = url.searchParams;
     const token = searchParams.get('token');
@@ -54,7 +56,7 @@ export async function GET(req: NextRequest) {
 
         const baseUrl = new URL(process.env.NEXT_BASE_URL!);
 
-        return Response.redirect(baseUrl + '/settings');
+        return Response.redirect(baseUrl + activeLocal + '/settings');
     } catch (error: any) {
         return Response.json(
             {
