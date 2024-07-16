@@ -33,7 +33,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -   [x] Landing Page
 -   [ ] Home Page
 -   [x] Mail Verification
--   [ ] Multilingual Support
+-   [x] Multilingual Support
 -   [ ] Stable diffusion model from cf
 
-> **Note:** Change Schema for Input validation in schema.ts file
+-   [ ] Email to russian
+-   [ ] Navabar changes (removal of navbar completely)
+-   [ ] Home page UI should be like Perplexity
