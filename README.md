@@ -39,3 +39,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -   [ ] Email to russian
 -   [ ] Navabar changes (removal of navbar completely)
 -   [ ] Home page UI should be like Perplexity
+-   [ ] Feedback page
