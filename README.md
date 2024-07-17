@@ -34,9 +34,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -   [ ] Home Page
 -   [x] Mail Verification
 -   [x] Multilingual Support
--   [ ] Stable diffusion model from cf
 
 -   [ ] Email to russian
--   [ ] Navabar changes (removal of navbar completely)
--   [ ] Home page UI should be like Perplexity
+-   [x] Navabar changes (removal of navbar completely)
+-   [x] Home page UI should be like Perplexity
+-   [ ] russian google api translate for model feeding
 -   [ ] Feedback page
+-   [ ] russian trans
+-   [ ] models impanlt
+-   [ ] Ui of landing page
