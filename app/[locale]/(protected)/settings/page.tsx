@@ -10,7 +10,7 @@ export default async function page() {
             {JSON.stringify(session)}
             <ImageGenerator />
             <form action={logout}>
-                /<Button>Logout</Button>
+                <Button>Logout</Button>
             </form>
         </div>
     );

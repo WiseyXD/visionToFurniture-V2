@@ -8,21 +8,17 @@ export async function POST(request: NextRequest) {
 
     try {
         const response = await axios.post(
-            'http://api.openai.com/v1/images/generations',
-            {
-                prompt: prompt,
-                n: 1, // Number of images to generate
-                size: '512x512', // Adjust the size as needed
-            },
+            'http://ec2-18-199-223-42.eu-central-1.compute.amazonaws.com:4000/api/generate-image',
+            { prompt },
             {
                 headers: {
-                    Authorization: process.env.OPENAI_API_KEY,
                     'Content-Type': 'application/json',
                 },
             }
         );
 
-        const imageUrl = response.data.data[0].url;
+        console.log(response.data);
+        const imageUrl = response.data;
         return NextResponse.json({ imageUrl }, { status: 200 });
     } catch (error: any) {
         console.log(error);
