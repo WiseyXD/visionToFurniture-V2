@@ -14,13 +14,16 @@ const ImageGenerator = () => {
         setError('');
 
         try {
-            const response = await fetch('/api/generate-image', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ prompt }),
-            });
+            const response = await fetch(
+                `http://ec2-18-199-223-42.eu-central-1.compute.amazonaws.com:4000/api/generate-image`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ prompt }),
+                }
+            );
 
             if (!response.ok) {
                 console.log(response);
