@@ -26,6 +26,8 @@ export default function NewNavbar() {
 
     const activeLocal = useLocale();
 
+    if (sessionData) return;
+
     const menuItems = [
         'Profile',
         'Dashboard',
