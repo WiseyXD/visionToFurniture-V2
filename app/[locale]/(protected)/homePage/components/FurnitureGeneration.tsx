@@ -343,6 +343,7 @@ export default function FurnitureGeneration() {
             }
 
             const data = await response.json();
+
             setImageUrl(data.imageUrl.imageUrl);
             setPrompt('');
         } catch (error) {
