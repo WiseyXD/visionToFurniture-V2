@@ -1,105 +1,15 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Textarea } from '@/components/ui/textarea';
-import Link from 'next/link';
+import LocaleToggle from '@/components/locale-toggle';
+import FurnitureGeneration from './components/FurnitureGeneration';
+import Sidebar from './components/Sidebar';
 
 export default function Component() {
     return (
         <div className="grid md:grid-cols-[260px_1fr] min-h-screen w-full">
-            <div className="flex-col hidden gap-2 text-foreground bg-background md:flex">
-                <div className="sticky top-0 p-2">
-                    <Button
-                        variant="ghost"
-                        className="justify-start w-full gap-2 px-2 text-left"
-                    >
-                        <div className="flex items-center justify-center rounded-full w-7 h-7">
-                            <BotIcon className="w-4 h-4" />
-                        </div>
-                        <div className="overflow-hidden text-sm grow text-ellipsis whitespace-nowrap">
-                            ChatGPT
-                        </div>
-                        <PenIcon className="w-4 h-4" />
-                    </Button>
-                </div>
-                <div className="flex-1 overflow-auto">
-                    <div className="grid gap-1 p-2 text-foreground">
-                        <div className="px-2 text-xs font-medium text-muted-foreground">
-                            Today
-                        </div>
-                        <Link
-                            href="#"
-                            className="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50"
-                            prefetch={false}
-                        >
-                            Airplane Turbulence: Sky&apos;s Rollercoaster
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50"
-                            prefetch={false}
-                        >
-                            How to make a chat app with React
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50"
-                            prefetch={false}
-                        >
-                            Cooking recipe for disaster
-                        </Link>
-                    </div>
-                    <div className="grid gap-1 p-2 text-foreground">
-                        <div className="px-2 text-xs font-medium text-muted-foreground">
-                            Yesterday
-                        </div>
-                        <Link
-                            href="#"
-                            className="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50"
-                            prefetch={false}
-                        >
-                            Python functon for Fibonacci sequence
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50"
-                            prefetch={false}
-                        >
-                            Five largest lakes in the world
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50"
-                            prefetch={false}
-                        >
-                            Weather forecast in Seattle
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50"
-                            prefetch={false}
-                        >
-                            Chicken or the egg?
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50"
-                            prefetch={false}
-                        >
-                            Neural networks for dummies
-                        </Link>
-                    </div>
-                </div>
-            </div>
+            <Sidebar />
+
             <div className="flex flex-col">
                 <div className="sticky top-0 p-2">
-                    <DropdownMenu>
+                    {/* <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                             <Button
                                 variant="ghost"
@@ -137,111 +47,10 @@ export default function Component() {
                                 </div>
                             </DropdownMenuItem>
                         </DropdownMenuContent>
-                    </DropdownMenu>
+                    </DropdownMenu> */}
+                    <LocaleToggle />
                 </div>
-                <div className="flex flex-col items-start flex-1 max-w-2xl gap-8 px-4 mx-auto">
-                    <div className="flex items-start gap-4">
-                        <Avatar className="w-6 h-6 border">
-                            <AvatarImage src="/placeholder-user.jpg" />
-                            <AvatarFallback>YO</AvatarFallback>
-                        </Avatar>
-                        <div className="grid gap-1">
-                            <div className="font-bold">You</div>
-                            <div className="prose text-muted-foreground">
-                                <p>
-                                    Can you explain airplane turbulence to
-                                    someone who has never flown before? Make it
-                                    conversational and concise.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                        <Avatar className="w-6 h-6 border">
-                            <AvatarImage src="/placeholder-user.jpg" />
-                            <AvatarFallback>OA</AvatarFallback>
-                        </Avatar>
-                        <div className="grid gap-1">
-                            <div className="font-bold">ChatGPT</div>
-                            <div className="prose text-muted-foreground">
-                                <p>
-                                    Of course! Imagine you&apos;re in a car
-                                    driving down a bumpy road, and the ride
-                                    isn&apos;t perfectly smooth. Sometimes, you
-                                    hit small potholes or bumps, right? Well,
-                                    when you&apos;re in an airplane, it&apos;s
-                                    kind of like that, but in the sky.
-                                </p>
-                                <p>
-                                    Airplane turbulence happens when the plane
-                                    encounters pockets of air that are moving
-                                    differently. It&apos;s like sailing a boat
-                                    on choppy water. These air pockets can make
-                                    the plane feel like it&apos;s bouncing or
-                                    shaking a bit. It&apos;s completely normal
-                                    and usually not dangerous at all.
-                                </p>
-                            </div>
-                            <div className="flex items-center gap-2 py-2">
-                                <Button
-                                    variant="ghost"
-                                    size="icon"
-                                    className="w-4 h-4 hover:bg-transparent text-stone-400 hover:text-stone-900"
-                                >
-                                    <ClipboardIcon className="w-4 h-4" />
-                                    <span className="sr-only">Copy</span>
-                                </Button>
-                                <Button
-                                    variant="ghost"
-                                    size="icon"
-                                    className="w-4 h-4 hover:bg-transparent text-stone-400 hover:text-stone-900"
-                                >
-                                    <ThumbsUpIcon className="w-4 h-4" />
-                                    <span className="sr-only">Upvote</span>
-                                </Button>
-                                <Button
-                                    variant="ghost"
-                                    size="icon"
-                                    className="w-4 h-4 hover:bg-transparent text-stone-400 hover:text-stone-900"
-                                >
-                                    <ThumbsDownIcon className="w-4 h-4" />
-                                    <span className="sr-only">Downvote</span>
-                                </Button>
-                                <Button
-                                    variant="ghost"
-                                    size="icon"
-                                    className="w-4 h-4 hover:bg-transparent text-stone-400 hover:text-stone-900"
-                                >
-                                    <RefreshCcwIcon className="w-4 h-4" />
-                                    <span className="sr-only">Regenerate</span>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="max-w-2xl w-full sticky bottom-0 mx-auto py-2 flex flex-col gap-1.5 px-4 bg-background">
-                    <div className="relative flex items-center gap-2">
-                        <Textarea
-                            placeholder="Message ChatGPT..."
-                            name="message"
-                            id="message"
-                            rows={1}
-                            className="min-h-[48px] rounded-2xl resize-none p-4 border border-neutral-400 shadow-sm flex-1"
-                        />
-                        <Button type="submit" size="icon" className="w-8 h-8">
-                            <PaperclipIcon className="w-4 h-4" />
-                            <span className="sr-only">Attach file</span>
-                        </Button>
-                        <Button type="submit" size="icon" className="w-8 h-8">
-                            <ArrowUpIcon className="w-4 h-4" />
-                            <span className="sr-only">Send</span>
-                        </Button>
-                    </div>
-                    <p className="text-xs font-medium text-center text-neutral-700">
-                        ChatGPT can make mistakes. Consider checking important
-                        information.
-                    </p>
-                </div>
+                <FurnitureGeneration />
             </div>
         </div>
     );
