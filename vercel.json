@@ -1,7 +1,0 @@
-{
-    "functions": {
-        "app/api/inpaint-image/route.ts": {
-            "maxDuration": 100
-        }
-    }
-}
