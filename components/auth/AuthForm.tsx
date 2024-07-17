@@ -108,7 +108,7 @@ export default function AuthForm({
         });
 
         if (success == 'Logging in') {
-            router.push('/settings');
+            router.push('/homePage');
         }
     }
 

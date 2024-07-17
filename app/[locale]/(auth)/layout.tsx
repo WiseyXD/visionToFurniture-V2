@@ -9,6 +9,6 @@ export interface IBaseTemplate {
 export default async function BaseTemplate({ children }: IBaseTemplate) {
     const { user } = await validateRequest();
     const activeLocale = await getLocale();
-    if (user) redirect(`/${activeLocale}/settings`);
+    if (user) redirect(`/${activeLocale}/homePage`);
     return <div>{children}</div>;
 }

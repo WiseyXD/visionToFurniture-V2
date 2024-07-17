@@ -55,7 +55,7 @@ export async function GET(req: NextRequest) {
 
         const baseUrl = new URL(process.env.NEXT_BASE_URL!);
 
-        return Response.redirect(baseUrl + '/en' + '/settings');
+        return Response.redirect(baseUrl + '/en' + '/homePage');
     } catch (error: any) {
         return Response.json(
             {
