@@ -137,7 +137,7 @@ export default function FurnishifyComponent() {
                 >
                     <div className="relative flex items-center gap-2">
                         <Textarea
-                            placeholder="Enter a prompt to generate furniture..."
+                            placeholder={t('placeholder')}
                             value={prompt}
                             onChange={(e) => setPrompt(e.target.value)}
                             name="prompt"
