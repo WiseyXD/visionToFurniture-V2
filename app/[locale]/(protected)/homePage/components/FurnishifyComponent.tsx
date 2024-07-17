@@ -1,6 +1,7 @@
 'use client';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import React, { useState } from 'react';
 
@@ -38,7 +39,7 @@ export default function FurnishifyComponent() {
                 method: 'POST',
                 body: formData,
             });
-
+            console.log(response.body);
             if (!response.ok) {
                 throw new Error('Failed to generate image');
             }
@@ -160,14 +161,15 @@ export default function FurnishifyComponent() {
                             rows={1}
                             className="min-h-[48px] rounded-2xl resize-none p-4 border border-neutral-400 shadow-sm flex-1"
                         />
-                        <input
+                        <Input
+                            placeholder="Select image"
                             type="file"
                             accept="image/*"
                             onChange={handleImageChange}
-                            className="hidden"
+                            className="w-8 h-8"
                             id="imageUpload"
                         />
-                        <label htmlFor="imageUpload" className="cursor-pointer">
+                        {/* <label htmlFor="imageUpload" className="cursor-pointer">
                             <Button
                                 size="icon"
                                 className="w-8 h-8"
@@ -176,7 +178,7 @@ export default function FurnishifyComponent() {
                                 <PaperclipIcon className="w-4 h-4" />
                                 <span className="sr-only">Attach file</span>
                             </Button>
-                        </label>
+                        </label> */}
                         <Button
                             type="submit"
                             size="icon"
