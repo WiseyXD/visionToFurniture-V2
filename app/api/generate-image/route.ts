@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
 
     try {
         const response = await axios.post(
-            'https://api.openai.com/v1/images/generations',
+            'http://api.openai.com/v1/images/generations',
             {
                 prompt: prompt,
                 n: 1, // Number of images to generate
