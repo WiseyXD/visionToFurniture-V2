@@ -11,6 +11,7 @@ export const revalidate = 0;
 
 export async function POST(request: NextRequest) {
     try {
+        const startTime = Date.now();
         // Check if the request is multipart/form-data
         const contentType = request.headers.get('content-type');
         if (!contentType || !contentType.includes('multipart/form-data')) {
@@ -51,7 +52,10 @@ export async function POST(request: NextRequest) {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
+            timeout: 55000,
         });
+
+        const endTime = Date.now();
 
         if (response.status !== 200) {
             throw new Error(
@@ -65,7 +69,16 @@ export async function POST(request: NextRequest) {
             throw new Error('API response does not contain an image URL');
         }
 
-        return NextResponse.json({ imageUrl }, { status: 200 });
+        // return NextResponse.json({ imageUrl }, { status: 200 });
+        return NextResponse.json(
+            { imageUrl },
+            {
+                status: 200,
+                headers: {
+                    'Server-Timing': `total;dur=${endTime - startTime}`,
+                },
+            }
+        );
     } catch (error: any) {
         console.error('Error generating edited image:', error);
 
