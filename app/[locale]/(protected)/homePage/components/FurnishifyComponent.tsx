@@ -317,7 +317,7 @@ function SparkleIcon(props: any) {
     );
 }
 
-export default function FurnitureGeneration() {
+export default function FurnishifyComponent() {
     const [prompt, setPrompt] = useState('');
     const [imageUrl, setImageUrl] = useState('');
     const [loading, setLoading] = useState(false);
@@ -458,7 +458,15 @@ export default function FurnitureGeneration() {
                             rows={1}
                             className="min-h-[48px] rounded-2xl resize-none p-4 border border-neutral-400 shadow-sm flex-1"
                         />
-
+                        <Button
+                            type="submit"
+                            size="icon"
+                            className="w-8 h-8"
+                            disabled={loading}
+                        >
+                            <PaperclipIcon className="w-4 h-4" />
+                            <span className="sr-only">Attach file</span>
+                        </Button>
                         <Button
                             type="submit"
                             size="icon"

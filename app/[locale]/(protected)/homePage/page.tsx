@@ -1,11 +1,19 @@
+'use client';
 import LocaleToggle from '@/components/locale-toggle';
+import { useState } from 'react';
+import FurnishifyComponent from './components/FurnishifyComponent';
 import FurnitureGeneration from './components/FurnitureGeneration';
 import Sidebar from './components/Sidebar';
 
-export default function Component() {
+export default function Page() {
+    const [selectedItem, setSelectedItem] = useState<string>('furniture');
+
+    const handleSelectItem = (item: string) => {
+        setSelectedItem(item);
+    };
     return (
         <div className="grid md:grid-cols-[260px_1fr] min-h-screen w-full">
-            <Sidebar />
+            <Sidebar onSelectItem={handleSelectItem} />
 
             <div className="flex flex-col">
                 <div className="sticky top-0 p-2">
@@ -50,7 +58,8 @@ export default function Component() {
                     </DropdownMenu> */}
                     <LocaleToggle />
                 </div>
-                <FurnitureGeneration />
+                {selectedItem === 'furniture' && <FurnitureGeneration />}
+                {selectedItem === 'furnishify' && <FurnishifyComponent />}
             </div>
         </div>
     );
