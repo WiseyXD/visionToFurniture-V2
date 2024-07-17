@@ -96,6 +96,7 @@
         "logout": "Logout"
     },
     "side": {
+        "v": "Vision",
         "gen": "Furniture Generation",
         "fur": "Furnishify"
     },
@@ -109,6 +110,7 @@
         "Upvote": "Upvote",
         "Downvote": "Downvote",
         "re": "Regenerate",
+        "placeholder": "Enter a prompt to generate furniture...",
         "s": "Send",
         "m": "Vision can make mistakes. Consider checking important information.",
         "g": " Generating image..."

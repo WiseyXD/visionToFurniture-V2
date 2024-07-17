@@ -60,6 +60,7 @@
 import { AcmeLogo } from '@/components/AcmeLogo';
 import { Button } from '@/components/ui/button';
 import { Flame, LampDesk, PenIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { ReactNode, useState } from 'react';
 
@@ -69,16 +70,17 @@ interface SidebarItem {
     logo: ReactNode;
 }
 
-const SidebarContent: SidebarItem[] = [
-    { id: 'furniture', text: 'Furniture Generation', logo: <LampDesk /> },
-    { id: 'furnishify', text: 'Furnishify', logo: <Flame /> },
-];
-
 interface SidebarProps {
     onSelectItem: (itemId: string) => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ onSelectItem }) => {
+    const t = useTranslations('side');
+    const SidebarContent: SidebarItem[] = [
+        { id: 'furniture', text: t('gen'), logo: <LampDesk /> },
+        { id: 'furnishify', text: t('fur'), logo: <Flame /> },
+    ];
+
     const [selectedItem, setSelectedItem] = useState(SidebarContent[0].id);
 
     const handleItemClick = (itemId: string) => {
@@ -97,7 +99,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onSelectItem }) => {
                         <AcmeLogo />
                     </div>
                     <div className="overflow-hidden text-sm grow text-ellipsis whitespace-nowrap">
-                        Vision
+                        {t('v')}
                     </div>
                     <PenIcon className="w-4 h-4" />
                 </Button>

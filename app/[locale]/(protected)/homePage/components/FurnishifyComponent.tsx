@@ -3,9 +3,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
 export default function FurnishifyComponent() {
+    const t = useTranslations('furnishify');
+
     const [prompt, setPrompt] = useState('');
     const [image, setImage] = useState<File | null>(null);
     const [imageUrl, setImageUrl] = useState('');
@@ -64,13 +67,9 @@ export default function FurnishifyComponent() {
                         <AvatarFallback>YO</AvatarFallback>
                     </Avatar>
                     <div className="grid gap-1">
-                        <div className="font-bold">You</div>
+                        <div className="font-bold">{t('You')}</div>
                         <div className="prose text-muted-foreground">
-                            <p>
-                                Can you explain airplane turbulence to someone
-                                who has never flown before? Make it
-                                conversational and concise.
-                            </p>
+                            <p>{t('tur')}</p>
                         </div>
                     </div>
                 </div>
@@ -80,25 +79,10 @@ export default function FurnishifyComponent() {
                         <AvatarFallback>OA</AvatarFallback>
                     </Avatar>
                     <div className="grid gap-1">
-                        <div className="font-bold">Vision</div>
+                        <div className="font-bold">{t('v')}</div>
                         <div className="prose text-muted-foreground">
-                            <p>
-                                Of course! Imagine you&apos;re in a car driving
-                                down a bumpy road, and the ride isn&apos;t
-                                perfectly smooth. Sometimes, you hit small
-                                potholes or bumps, right? Well, when you&apos;re
-                                in an airplane, it&apos;s kind of like that, but
-                                in the sky.
-                            </p>
-                            <p>
-                                Airplane turbulence happens when the plane
-                                encounters pockets of air that are moving
-                                differently. It&apos;s like sailing a boat on
-                                choppy water. These air pockets can make the
-                                plane feel like it&apos;s bouncing or shaking a
-                                bit. It&apos;s completely normal and usually not
-                                dangerous at all.
-                            </p>
+                            <p>{t('can')}</p>
+                            <p>{t('air')}</p>
                         </div>
                         <div className="flex items-center gap-2 py-2">
                             <Button
@@ -107,7 +91,7 @@ export default function FurnishifyComponent() {
                                 className="w-4 h-4 hover:bg-transparent text-stone-400 hover:text-stone-900"
                             >
                                 <ClipboardIcon className="w-4 h-4" />
-                                <span className="sr-only">Copy</span>
+                                <span className="sr-only">{t('c')}</span>
                             </Button>
                             <Button
                                 variant="ghost"
@@ -115,7 +99,7 @@ export default function FurnishifyComponent() {
                                 className="w-4 h-4 hover:bg-transparent text-stone-400 hover:text-stone-900"
                             >
                                 <ThumbsUpIcon className="w-4 h-4" />
-                                <span className="sr-only">Upvote</span>
+                                <span className="sr-only">{t('Upvote')}</span>
                             </Button>
                             <Button
                                 variant="ghost"
@@ -123,7 +107,7 @@ export default function FurnishifyComponent() {
                                 className="w-4 h-4 hover:bg-transparent text-stone-400 hover:text-stone-900"
                             >
                                 <ThumbsDownIcon className="w-4 h-4" />
-                                <span className="sr-only">Downvote</span>
+                                <span className="sr-only">{t('Downvote')}</span>
                             </Button>
                             <Button
                                 variant="ghost"
@@ -131,7 +115,7 @@ export default function FurnishifyComponent() {
                                 className="w-4 h-4 hover:bg-transparent text-stone-400 hover:text-stone-900"
                             >
                                 <RefreshCcwIcon className="w-4 h-4" />
-                                <span className="sr-only">Regenerate</span>
+                                <span className="sr-only">{t('re')}</span>
                             </Button>
                         </div>
                     </div>
@@ -186,16 +170,15 @@ export default function FurnishifyComponent() {
                             disabled={loading}
                         >
                             <ArrowUpIcon className="w-4 h-4" />
-                            <span className="sr-only">Send</span>
+                            <span className="sr-only">{t('s')}</span>
                         </Button>
                     </div>
                     <p className="text-xs font-medium text-center text-neutral-700">
-                        Vision can make mistakes. Consider checking important
-                        information.
+                        {t('m')}
                     </p>
                     {loading && (
                         <p className="text-xs font-medium text-center text-neutral-700">
-                            Generating image...
+                            {t('g')}
                         </p>
                     )}
                     {error && (
