@@ -85,5 +85,48 @@
         "backButtonLabel1": " Already have an account ?",
         "submitButton1": "Register",
         "formType1": "register"
+    },
+    "toggle": {
+        "toggle": "Toggle theme",
+        "l": "Light",
+        "d": "Dark",
+        "s": "System"
+    },
+    "out": {
+        "logout": "Logout"
+    },
+    "side": {
+        "gen": "Furniture Generation",
+        "fur": "Furnishify"
+    },
+    "gen": {
+        "You": "You",
+        "tur": "  Can you explain airplane turbulence to someone who has never flown before? Make it conversational and concise.",
+        "v": "Vision",
+        "can": "  Of course! Imagine you&apos;re in a car driving down a bumpy road, and the ride isn&apos;t perfectly smooth. Sometimes, you hit small potholes or bumps, right? Well, when you&apos;re in an airplane, it&apos;s kind of like that, but in the sky.",
+        "air": " Airplane turbulence happens when the plane encounters pockets of air that are moving differently. It&apos;s like sailing a boat on choppy water. These air pockets can make the plane feel like it&apos;s bouncing or shaking a bit. It&apos;s completely normal and usually not dangerous at all.",
+        "c": "Copy",
+        "Upvote": "Upvote",
+        "Downvote": "Downvote",
+        "re": "Regenerate",
+        "s": "Send",
+        "m": "Vision can make mistakes. Consider checking important information.",
+        "g": " Generating image..."
+    },
+
+    "furnishify": {
+        "You": "You",
+        "tur": "  Can you explain airplane turbulence to someone who has never flown before? Make it conversational and concise.",
+        "v": "Vision",
+        "can": "  Of course! Imagine you&apos;re in a car driving down a bumpy road, and the ride isn&apos;t perfectly smooth. Sometimes, you hit small potholes or bumps, right? Well, when you&apos;re in an airplane, it&apos;s kind of like that, but in the sky.",
+        "air": " Airplane turbulence happens when the plane encounters pockets of air that are moving differently. It&apos;s like sailing a boat on choppy water. These air pockets can make the plane feel like it&apos;s bouncing or shaking a bit. It&apos;s completely normal and usually not dangerous at all.",
+        "c": "Copy",
+        "Upvote": "Upvote",
+        "Downvote": "Downvote",
+        "re": "Regenerate",
+        "a": "Attach File",
+        "s": "Send",
+        "m": "Vision can make mistakes. Consider checking important information.",
+        "g": " Generating image..."
     }
 }
