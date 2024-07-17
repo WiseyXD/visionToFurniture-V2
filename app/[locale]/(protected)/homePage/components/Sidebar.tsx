@@ -59,7 +59,7 @@
 
 import { AcmeLogo } from '@/components/AcmeLogo';
 import { Button } from '@/components/ui/button';
-import { Flame, LampDesk, PenIcon } from 'lucide-react';
+import { Flame, LampDesk } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { ReactNode, useState } from 'react';
@@ -101,7 +101,6 @@ const Sidebar: React.FC<SidebarProps> = ({ onSelectItem }) => {
                     <div className="overflow-hidden text-sm grow text-ellipsis whitespace-nowrap">
                         {t('v')}
                     </div>
-                    <PenIcon className="w-4 h-4" />
                 </Button>
             </div>
             <div className="flex-1 overflow-auto">

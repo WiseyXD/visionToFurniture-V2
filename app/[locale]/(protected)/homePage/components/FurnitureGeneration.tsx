@@ -2,6 +2,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
+import { checkKeywords } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 
 import React, { useState } from 'react';
@@ -331,6 +332,13 @@ export default function FurnitureGeneration() {
         setLoading(true);
         setError('');
         setImageUrl('');
+
+        if (!checkKeywords(prompt)) {
+            setError('Invlaid inputs');
+
+            setLoading(false);
+            return;
+        }
 
         try {
             const response = await fetch('/api/generate-image', {

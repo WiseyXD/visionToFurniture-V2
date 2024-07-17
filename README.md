@@ -31,7 +31,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## This is the vision to furniture application.
 
 -   [x] Landing Page
--   [ ] Home Page
+-   [x] Home Page
 -   [x] Mail Verification
 -   [x] Multilingual Support
 
@@ -40,6 +40,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -   [x] Home page UI should be like Perplexity
 -   [ ] russian google api translate for model feeding
 -   [ ] Feedback page
--   [ ] russian trans
+-   [x] russian trans
 -   [ ] models impanlt
--   [ ] Ui of landing page
+-   [x] Ui of landing page
+-   [ ] prompt testing
