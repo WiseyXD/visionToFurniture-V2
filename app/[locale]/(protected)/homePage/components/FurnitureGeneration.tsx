@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { checkKeywords } from '@/lib/utils';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import React, { useState } from 'react';
 
@@ -320,6 +320,7 @@ function SparkleIcon(props: any) {
 }
 
 export default function FurnitureGeneration() {
+    const activeLocale = useLocale();
     const t = useTranslations('gen');
 
     const [prompt, setPrompt] = useState('');

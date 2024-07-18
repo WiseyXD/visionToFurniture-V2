@@ -41,6 +41,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -   [ ] russian google api translate for model feeding
 -   [ ] Feedback page
 -   [x] russian trans
--   [ ] models impanlt
+-   [x] models impanlt
 -   [x] Ui of landing page
--   [ ] prompt testing
+-   [x] prompt testing
