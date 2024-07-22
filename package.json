@@ -43,6 +43,7 @@
     "formidable": "^3.5.1",
     "framer-motion": "^11.1.7",
     "fs": "^0.0.1-security",
+    "google-translate-api": "^2.3.0",
     "install": "^0.13.0",
     "jsonwebtoken": "^9.0.2",
     "lucia": "^3.1.1",
