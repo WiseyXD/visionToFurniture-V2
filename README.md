@@ -38,7 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -   [ ] Email to russian
 -   [x] Navabar changes (removal of navbar completely)
 -   [x] Home page UI should be like Perplexity
--   [ ] russian google api translate for model feeding
+-   [x] russian google api translate for model feeding
 -   [ ] Feedback page
 -   [x] russian trans
 -   [x] models impanlt
