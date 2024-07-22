@@ -389,7 +389,6 @@ export default function FurnitureGeneration() {
                         <div className="font-bold">{t('v')}</div>
                         <div className="prose text-muted-foreground">
                             <p>{t('can')}</p>
-                            <p>{t('air')}</p>
                         </div>
                         <div className="flex items-center gap-2 py-2">
                             <Button
