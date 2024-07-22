@@ -3,7 +3,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { checkKeywords } from '@/lib/utils';
-import translate from 'google-translate-api';
 import { useLocale, useTranslations } from 'next-intl';
 
 import React, { useState } from 'react';
@@ -331,18 +330,7 @@ export default function FurnitureGeneration() {
 
     const handleSubmit = async (e: React.SyntheticEvent) => {
         e.preventDefault();
-        if (activeLocale === 'ru') {
-            translate(prompt, { to: 'en' })
-                .then((res) => {
-                    console.log(res.text);
-                    //=> I speak English
-                    console.log(res.from.language.iso);
-                    //=> nl
-                })
-                .catch((err) => {
-                    console.error(err);
-                });
-        }
+
         setLoading(true);
         setError('');
         setImageUrl('');
