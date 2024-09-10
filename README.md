@@ -44,6 +44,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -   [x] models impanlt
 -   [x] Ui of landing page
 -   [x] prompt testing
--   [ ] Favicon
+-   [x] Favicon
 -   [ ] Sidebar scroll fix
 -   [ ] Github actions
