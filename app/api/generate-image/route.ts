@@ -4,11 +4,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 const openai = new OpenAI();
 
+export const runtime = 'edge'; // Mark as Edge function
 export async function POST(request: NextRequest) {
     const { prompt } = await request.json();
     try {
         const response = await openai.images.generate({
-            model: 'dall-e-3',
+            model: 'dall-e-2',
             prompt: prompt,
             size: '1024x1024',
             n: 1,
