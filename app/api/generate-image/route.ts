@@ -1,24 +1,20 @@
 // app/api/generate-image/route.js
 
-import axios from 'axios';
 import { NextRequest, NextResponse } from 'next/server';
+import OpenAI from 'openai';
+const openai = new OpenAI();
 
 export async function POST(request: NextRequest) {
     const { prompt } = await request.json();
-
     try {
-        const response = await axios.post(
-            'http://ec2-18-199-223-42.eu-central-1.compute.amazonaws.com:4000/api/generate-image',
-            { prompt },
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            }
-        );
-
-        console.log(response.data);
-        const imageUrl = response.data;
+        const response = await openai.images.generate({
+            model: 'dall-e-3',
+            prompt: prompt,
+            size: '1024x1024',
+            n: 1,
+            user: 'user-12345',
+        });
+        const imageUrl = response.data[0].url;
         return NextResponse.json({ imageUrl }, { status: 200 });
     } catch (error: any) {
         console.log(error);

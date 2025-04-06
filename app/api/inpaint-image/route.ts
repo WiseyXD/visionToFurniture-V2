@@ -1,12 +1,6 @@
 import axios from 'axios';
 import { NextRequest, NextResponse } from 'next/server';
 
-// export const config = {
-//     api: {
-//         bodyParser: false,
-//     },
-// };
-
 export const revalidate = 0;
 
 export async function POST(request: NextRequest) {
